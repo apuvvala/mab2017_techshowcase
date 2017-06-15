@@ -1,0 +1,43 @@
+1..5
+ok 1 - NoiseCancellation > NormalizedLMS/snr
+ok 2 - NoiseCancellation > NormalizedLMS/adapt(ScriptedIteration=adapt_off)
+ok 3 - NoiseCancellation > NormalizedLMS/adapt(ScriptedIteration=adapt_slow)
+not ok 4 - NoiseCancellation > NormalizedLMS/adapt(ScriptedIteration=adapt_fast)
+# ================================================================================
+# Verification failed in NoiseCancellation > NormalizedLMS/adapt(ScriptedIteration=adapt_fast).
+# 
+#     ---------------------
+#     Framework Diagnostic:
+#     ---------------------
+#     Failed criteria: Custom
+#     --> Custom Criteria Logs:
+#             --------------------------------------------------------------------
+#             VerificationFailed in custom criteria of sltest.testmanager.TestCase.
+#             
+#                 ----------------
+#                 Test Diagnostic:
+#                 ----------------
+#                 signal-to-ratio must be lower than -15dB with step size 0.04
+#             
+#                 ---------------------
+#                 Framework Diagnostic:
+#                 ---------------------
+#                 verifyLessThanOrEqual failed.
+#                 --> The value must be less than or equal to the maximum value.
+#                 
+#                 Actual Value:
+#                   single
+#                 
+#                  -14.9789000
+#                 Maximum Value (Inclusive):
+#                   single
+#                 
+#                    -15
+#             
+#             --------------------------------------------------------------------
+#     --> Simulink Test Manager Results:
+#             Results: 2017-May-30 16:25:07/adapt/adapt_fast
+# ================================================================================
+# 
+ok 5 - correlationTest/testCorrelationWithDesiredSignal
+
