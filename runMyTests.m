@@ -6,7 +6,7 @@ import matlab.unittest.plugins.ToFile
 jenkins_workspace = getenv('WORKSPACE');
 try
     % Pick up local tests
-    suite = testsuite('/Users/Shared/Jenkins/Documents/MATLAB/work/mab2017/ci');
+    suite = testsuite();
     
     xmlResultsFile = fullfile(jenkins_workspace, 'JUnitResults.xml');
     tapResultsFile = fullfile(jenkins_workspace, 'TAPResults.tap');
