@@ -10,12 +10,12 @@ try
     
     xmlResultsFile = fullfile(jenkins_workspace, 'JUnitResults.xml');
     tapResultsFile = fullfile(jenkins_workspace, 'TAPResults.tap');
-    reportFile = fullfile(jenkins_workspace, 'TestReport.pdf');
+    % reportFile = fullfile(jenkins_workspace, 'TestReport.pdf');
     
     runner = TestRunner.withTextOutput;
     runner.addPlugin(TAPPlugin.producingVersion13(ToFile(tapResultsFile)));
     runner.addPlugin(XMLPlugin.producingJUnitFormat(xmlResultsFile));
-    runner.addPlugin(TestManagerReportPlugin(reportFile));
+    % runner.addPlugin(TestManagerReportPlugin(reportFile));
     
     results = runner.run(suite);
 catch e
