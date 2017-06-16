@@ -6,7 +6,10 @@ import matlab.unittest.plugins.ToFile
 jenkins_workspace = getenv('WORKSPACE');
 try
     % Pick up local tests
-    suite = testsuite();
+    suite1 = testsuite();
+    suite2 = testsuite(fullfile(matlabroot, 'test', 'toolbox', 'stm', 'matlabunit', 'testdata', 'testfolder'));
+    
+    suite = [suite1 suite2];
     
     xmlResultsFile = fullfile(jenkins_workspace, 'JUnitResults.xml');
     tapResultsFile = fullfile(jenkins_workspace, 'TAPResults.tap');
