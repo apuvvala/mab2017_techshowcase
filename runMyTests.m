@@ -8,8 +8,9 @@ try
     % Pick up local tests
     suite1 = testsuite();
     suite2 = testsuite(fullfile(matlabroot, 'test', 'toolbox', 'stm', 'matlabunit', 'testdata', 'testfolder'));
+    suite3 = testsuite(fullfile(matlabroot, 'test', 'toolbox', 'stm', 'matlabunit', 'testdata', 'testfolder', 'iterations'));
     
-    suite = [suite1 suite2];
+    suite = [suite1 suite2 suite3];
     
     xmlResultsFile = fullfile(jenkins_workspace, 'JUnitResults.xml');
     tapResultsFile = fullfile(jenkins_workspace, 'TAPResults.tap');
