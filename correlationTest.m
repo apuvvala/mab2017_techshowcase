@@ -1,8 +1,7 @@
 function tests = correlationTest
 % Function based MATLAB Unit test to test the correlation of the output
 
-%tests = functiontests(localfunctions);
-tests = [];
+tests = functiontests(localfunctions);
 
 function testCorrelationWithDesiredSignal(testCase)
 model = 'audioanc_mabdemo';
