@@ -10,9 +10,9 @@ try
     suite1 = testsuite();
     suite2 = testsuite(fullfile(matlabroot, 'test', 'toolbox', 'stm', 'matlabunit', 'testdata', 'testfolder'));
     suite3 = testsuite(fullfile(matlabroot, 'test', 'toolbox', 'stm', 'matlabunit', 'testdata', 'testfolder', 'iterations'));
-    %suite4 = testsuite(fullfile(matlabroot, 'test', 'toolbox', 'stm', 'matlabunit', 'testdata', 'testfolder', 'tags'));
+    suite4 = testsuite(fullfile(matlabroot, 'test', 'toolbox', 'stm', 'matlabunit', 'testdata', 'testfolder', 'tags'));
     
-    suite = [suite1 suite2 suite3];
+    suite = [suite1 suite2 suite3 suite4];
     
     xmlResultsFile = fullfile(jenkins_workspace, 'JUnitResults.xml');
     tapResultsFile = fullfile(jenkins_workspace, 'TAPResults.tap');
